@@ -11,9 +11,21 @@ import { categories, Category } from '../utils/conversions';
 
 type Props = {
   onSelect: (category: Category) => void;
+  adsEnabled: boolean;
+  rewardActive: boolean;
+  rewardedLoaded: boolean;
+  onWatchRewarded: () => void;
+  onGoPremium: () => void;
 };
 
-export default function HomeScreen({ onSelect }: Props) {
+export default function HomeScreen({
+  onSelect,
+  adsEnabled,
+  rewardActive,
+  rewardedLoaded,
+  onWatchRewarded,
+  onGoPremium,
+}: Props) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -26,6 +38,37 @@ export default function HomeScreen({ onSelect }: Props) {
         numColumns={2}
         columnWrapperStyle={styles.row}
         contentContainerStyle={styles.list}
+        ListFooterComponent={
+          <View style={styles.monetizationBox}>
+            {!adsEnabled ? (
+              <Text style={styles.adsOffText}>
+                {rewardActive
+                  ? '✓ Anúncios desativados temporariamente'
+                  : '✓ Versão Premium — sem anúncios'}
+              </Text>
+            ) : (
+              <>
+                <TouchableOpacity
+                  style={[styles.monetizationBtn, !rewardedLoaded && styles.btnDisabled]}
+                  onPress={onWatchRewarded}
+                  disabled={!rewardedLoaded}
+                >
+                  <Text style={styles.monetizationBtnText}>
+                    📺 Assistir vídeo e remover anúncios por 1h
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={[styles.monetizationBtn, styles.premiumBtn]}
+                  onPress={onGoPremium}
+                >
+                  <Text style={[styles.monetizationBtnText, styles.premiumBtnText]}>
+                    ⭐ Remover anúncios para sempre
+                  </Text>
+                </TouchableOpacity>
+              </>
+            )}
+          </View>
+        }
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.card}
@@ -92,5 +135,39 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: colors.text,
     textAlign: 'center',
+  },
+  monetizationBox: {
+    marginTop: spacing.sm,
+    gap: spacing.sm,
+  },
+  monetizationBtn: {
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: radius.md,
+    padding: spacing.md,
+    alignItems: 'center',
+  },
+  btnDisabled: {
+    opacity: 0.5,
+  },
+  monetizationBtnText: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: colors.text,
+  },
+  premiumBtn: {
+    backgroundColor: colors.primary,
+    borderColor: colors.primary,
+  },
+  premiumBtnText: {
+    color: '#fff',
+  },
+  adsOffText: {
+    textAlign: 'center',
+    color: colors.success,
+    fontWeight: '600',
+    fontSize: 13,
+    padding: spacing.md,
   },
 });
