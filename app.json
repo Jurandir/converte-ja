@@ -24,6 +24,7 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
+      "./plugins/withPlayServicesAdsVersion",
       [
         "react-native-google-mobile-ads",
         {
