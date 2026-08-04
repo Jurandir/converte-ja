@@ -13,7 +13,7 @@ export function useRewardedAd(onEarnedReward: () => void) {
   useEffect(() => {
     const ad = adRef.current;
 
-    const unsubLoaded = ad.addAdEventListener(AdEventType.LOADED, () => {
+    const unsubLoaded = ad.addAdEventListener(RewardedAdEventType.LOADED, () => {
       setLoaded(true);
     });
     const unsubEarned = ad.addAdEventListener(
