@@ -1,15 +1,9 @@
 import { TestIds } from 'react-native-google-mobile-ads';
 
-/**
- * IDs de anúncio. Usa os IDs de teste oficiais do Google em desenvolvimento
- * (__DEV__) e os IDs reais em produção. Substituir os valores de produção
- * pelos gerados no painel do AdMob (admob.google.com) quando a conta for
- * criada — ver Fase 4 do roadmap.
- */
 
-const PRODUCTION_BANNER_ID = 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX';
-const PRODUCTION_INTERSTITIAL_ID = 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX';
-const PRODUCTION_REWARDED_ID = 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX';
+const PRODUCTION_BANNER_ID = 'ca-app-pub-2844165862251362/6864669080';
+const PRODUCTION_INTERSTITIAL_ID = 'ca-app-pub-2844165862251362/2410418758';
+const PRODUCTION_REWARDED_ID = 'ca-app-pub-2844165862251362/3855362360';
 
 export const bannerAdUnitId = __DEV__ ? TestIds.BANNER : PRODUCTION_BANNER_ID;
 export const interstitialAdUnitId = __DEV__

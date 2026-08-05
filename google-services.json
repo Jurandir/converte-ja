@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "000000000000",
-    "project_id": "converte-ja-dev",
-    "storage_bucket": "converte-ja-dev.appspot.com"
+    "project_number": "194333386862",
+    "project_id": "converte-ja",
+    "storage_bucket": "converte-ja.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:000000000000:android:000000000000000000000000",
+        "mobilesdk_app_id": "1:194333386862:android:c99e2a834af2061e335e7f",
         "android_client_info": {
           "package_name": "com.convertejaapp.app"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDev-placeholder-for-test-builds-only"
+          "current_key": "AIzaSyCz6xFWAxtMe6pY1sITn3iTRF5vyRqCXKI"
         }
       ],
       "services": {
