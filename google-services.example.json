@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "194333386862",
-    "project_id": "converte-ja",
-    "storage_bucket": "converte-ja.firebasestorage.app"
+    "project_number": "SEU_PROJECT_NUMBER",
+    "project_id": "SEU_PROJECT_ID",
+    "storage_bucket": "SEU_PROJECT_ID.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:194333386862:android:c99e2a834af2061e335e7f",
+        "mobilesdk_app_id": "SEU_MOBILESDK_APP_ID",
         "android_client_info": {
           "package_name": "com.convertejaapp.app"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCz6xFWAxtMe6pY1sITn3iTRF5vyRqCXKI"
+          "current_key": "SUA_FIREBASE_API_KEY"
         }
       ],
       "services": {

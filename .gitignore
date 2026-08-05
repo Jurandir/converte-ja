@@ -35,6 +35,11 @@ yarn-error.*
 
 # local env files
 .env*.local
+.env
+
+# Firebase / AdMob — arquivos reais ficam apenas na máquina local
+google-services.json
+GoogleService-Info.plist
 
 # typescript
 *.tsbuildinfo
